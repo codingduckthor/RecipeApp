@@ -17,7 +17,7 @@ function ViewRecipe() {
         );
         setRecipe(res.data);
       } catch (error) {
-        console.error("Ошибка загрузки рецепта:", error);
+        console.error("Error loading recipes:", error);
       } finally {
         setLoading(false);
       }
