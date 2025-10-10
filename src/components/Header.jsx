@@ -28,10 +28,10 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/contact"
+                to="/favorites"
                 className="cursor-pointer hover:text-orange-200 transition-colors duration-300"
               >
-                Contact
+                Favorites
               </Link>
             </li>
           </ul>

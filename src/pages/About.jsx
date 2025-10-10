@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function About() {
   return (
-    <>
-      <div>React-Redux, Tailwind, Axios</div>
-    </>
+    <Link to={`/about`}>
+      <div>About Page</div>
+    </Link>
   );
 }
 

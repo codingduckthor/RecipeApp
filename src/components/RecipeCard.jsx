@@ -1,14 +1,36 @@
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 function RecipeCard({ recipe }) {
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites.items);
+
+  const isFavorite = favorites.some((fav) => fav.id === recipe.id);
+
+  const toggleFavorite = () => {
+    if (isFavorite) {
+      dispatch({ type: "REMOVE_FAVORITE", payload: recipe.id });
+    } else {
+      dispatch({
+        type: "ADD_FAVORITE",
+        payload: {
+          id: recipe.id,
+          title: recipe.title,
+          image: recipe.image,
+        },
+      });
+    }
+  };
+
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-amber-400 hover:scale-105 transform transition duration-300 flex flex-col">
-      <img
-        src={recipe.image}
-        alt={recipe.title}
-        className="w-full h-48 object-cover"
-      />
-
+      <Link to={`/recipe/${recipe.id}`}>
+        <img
+          src={recipe.image}
+          alt={recipe.title}
+          className="w-full h-48 object-cover"
+        />
+      </Link>
       <div className="p-4 flex flex-col flex-grow justify-between">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 line-clamp-2">
@@ -27,6 +49,16 @@ function RecipeCard({ recipe }) {
         >
           View Recipe
         </Link>
+        <button
+          onClick={toggleFavorite}
+          className={`px-3 py-1 rounded-lg ${
+            isFavorite
+              ? "bg-red-500 text-white"
+              : "bg-gray-200 hover:bg-gray-300"
+          }`}
+        >
+          {isFavorite ? "★ Remove" : "☆ Favorite"}
+        </button>
       </div>
     </div>
   );

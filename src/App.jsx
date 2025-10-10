@@ -4,6 +4,7 @@ import Recipes from "./components/Recipes";
 import ViewRecipe from "./pages/ViewRecipe";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/recipe/:id" element={<ViewRecipe />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </div>
     </Router>
