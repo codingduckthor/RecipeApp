@@ -6,7 +6,13 @@ function Favorites() {
   const dispatch = useDispatch();
 
   if (favorites.length === 0) {
-    return <p className="text-center mt-10 text-gray-600">No favorites yet.</p>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p className="text-2xl text-gray-500 animate-pulse">
+          No favorites yet.
+        </p>
+      </div>
+    );
   }
 
   return (

@@ -51,13 +51,13 @@ function RecipeCard({ recipe }) {
         </Link>
         <button
           onClick={toggleFavorite}
-          className={`px-3 py-1 rounded-lg ${
+          className={`block mt-4 text-black text-center py-2 rounded-lg ${
             isFavorite
               ? "bg-red-500 text-white"
               : "bg-gray-200 hover:bg-gray-300"
           }`}
         >
-          {isFavorite ? "★ Remove" : "☆ Favorite"}
+          {isFavorite ? "★ Remove ★" : "☆ Favorite ☆"}
         </button>
       </div>
     </div>

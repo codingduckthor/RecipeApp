@@ -24,6 +24,3 @@ function App() {
 }
 
 export default App;
-
-// Home page - logo + app description
-// About - all the libs and systems used in a project

@@ -43,7 +43,7 @@ function Recipes() {
           placeholder="Search for a recipe..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="border border-gray-300 rounded-lg px-4 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+          className="border border-orange-600 rounded-lg px-4 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
         <button
           type="submit"
@@ -54,7 +54,11 @@ function Recipes() {
       </form>
 
       {loading ? (
-        <p className="text-center text-gray-500">Loading recipes...</p>
+        <div className="flex items-center justify-center h-screen">
+          <p className="text-2xl text-gray-500 animate-pulse">
+            Loading recipes...
+          </p>
+        </div>
       ) : recipes.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recipes.map((recipe) => (
