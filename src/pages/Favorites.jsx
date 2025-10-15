@@ -16,7 +16,7 @@ function Favorites() {
   }
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 h-screen">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Your Favorites</h2>
         <button
