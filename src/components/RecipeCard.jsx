@@ -31,7 +31,7 @@ function RecipeCard({ recipe }) {
           className="w-full h-48 object-cover"
         />
       </Link>
-      <div className="p-4 flex flex-col flex-grow justify-between">
+      <div className="p-3 flex flex-col flex-grow justify-between">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 line-clamp-2">
             {recipe.title}
