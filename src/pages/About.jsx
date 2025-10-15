@@ -1,42 +1,40 @@
 function About() {
   return (
     <div className="flex flex-col items-center justify-center h-screen text-center px-6">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">О проекте</h1>
-      <p className="text-lg text-gray-700 max-w-2xl">
-        Приложение <span className="font-semibold">Recipe Finder</span> создано
-        в учебных целях и предназначено для демонстрации работы с внешним API,
-        управления состоянием и маршрутизации в React.
+      <p className="text-lg text-gray-700 max-w-2xl mt-4">
+        The <span className="font-semibold">Recipe Finder</span> app was created
+        for educational purposes and demonstrates how to work with external
+        APIs, state management, and routing in React.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-2">
-        Функциональность:
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-2">
+        Features:
       </h2>
       <ul className="text-left text-gray-700 list-disc list-inside max-w-xl">
-        <li>Поиск рецептов по названию или ингредиенту</li>
-        <li>Просмотр описания и ингредиентов рецепта</li>
-        <li>Добавление рецептов в избранное</li>
-        <li>Локальное хранение избранных рецептов</li>
-        <li>Перевод названий и описаний рецептов на русский язык</li>
+        <li>Search recipes by name or ingredient</li>
+        <li>View recipe description and ingredients</li>
+        <li>Add recipes to favorites</li>
+        <li>Store favorite recipes locally</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-2">
-        Использованные технологии:
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-2">
+        Technologies Used:
       </h2>
       <ul className="text-left text-gray-700 list-disc list-inside max-w-xl">
         <li>
-          <strong>React</strong> — библиотека для построения интерфейсов
+          <strong>React</strong> — for building the user interface
         </li>
         <li>
-          <strong>Redux</strong> — управление состоянием (favorites)
+          <strong>Redux</strong> — for managing global state (favorites)
         </li>
         <li>
-          <strong>Tailwind CSS</strong> — стилизация и адаптивная верстка
+          <strong>Tailwind CSS</strong> — for styling and responsive layout
         </li>
         <li>
-          <strong>Vite</strong> — быстрая сборка проекта
+          <strong>Vite</strong> — for fast project bundling and development
         </li>
         <li>
-          <strong>API Edamam / TheMealDB</strong> — получение данных о рецептах
+          <strong>Spoonacular API</strong> — for fetching recipe data
         </li>
       </ul>
     </div>
