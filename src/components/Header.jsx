@@ -5,7 +5,7 @@ function Header() {
     <header className="bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md fixed top-0 flex-0 w-full z-10">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold tracking-wide">
-          Recipes
+          Recipe Finder
         </Link>
 
         <nav>
